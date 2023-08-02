@@ -1,0 +1,30 @@
+# comment
+
+FROM -> Base image ni ko'rsatish. Ya'ni biz qurayotgan image qaysi image ni ustiga qurilayotgani ko'rsatiladi.
+
+RUN -> FROM da ko'rsatilgan imagelarni ustida qanday buyruqlar bajarilishi ko'rsatiladi.
+
+RUN bilan bir nechta buyruqlarni bajarish uchun "&&" belgisi ishlatiladi. 
+Bir nechta buyruqlarni birga bajarish best practice hisoblanadi. Bir nechta buyruqlar ko'payib ketganda 
+keyingi qatorga olish uchun backslash \ ishlatiladi.
+
+COPY -> source dan destination ga nusxa olish uchun ishlatiladi.
+
+CMD -> CMD yordamida container ishga tushgan vaqtda bajariladigan default buyruq beriladi.
+Agardan container ni ishga tushurish paytida unga boshqa buyruq berilsa CMD dagi buyruq bekor qilinadi.
+
+CMD nginx -g 'daemon off;' -> shell form command.
+CMD ["<command1>", "<command2>", "<command3>"] -> exec form command. Best practice!
+
+EXPOSE -> image qaysi portni tinglayotgani bildiriladi. Bu buyruq portni ochmaydi, document vazifasini bajaradi.
+
+ENV -> bu buyruq yordamida muhit o'zgaruvchilari aniqlanadi. 
+
+ENTRYPOINT -> Xuddi CMD ga o'xshab container ishga tushgan vaqtda ishlab ketadigan command yoki scriptni aniqlash uchun ishlatiladi.
+Agar container run qilinganda boshqa buyruq berilsa ham ENTRYPOINT bekor qilinmaydi. 
+
+
+
+
+
+

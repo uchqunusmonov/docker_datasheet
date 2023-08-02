@@ -1,0 +1,68 @@
+DOCKER IMAGE
+Docker image deganda bizning dasturimiz va dasturimiz ishlashi uchun kerak bo'lgan boshqa fayllar nazarda tutiladi.
+
+DOCKER CONTAINER 
+Docker image ni ishga tushirilgan holati container deyiladi.
+
+
+MANAGEMENT COMMANS
+
+CONTAINER LAR BILAN ISHLASH.
+
+docker <command> <subcommand> -<key> docker commandlar strukturasi.
+
+docker container ls -> ishlab turgan container lar ro'yxati.
+docker container ls -a -> hamma container lar ro'yxati.
+
+docker ps -> eski versiyadagi ishlab turgan container lar ro'yxati.
+docker ps -a -> eski versiyadagi hamma container lar ro'yxati.
+
+docker container run <container_name> -> docker container ni ishga tushirish.
+
+docker container run -it <container_name> -> ishlayotgan container terminaliga ulanish uchun -it kalit so'zidan foydalaniladi.
+
+docker container start <container_name> -> docker container ni ishga tushirish.
+
+docker container attash <container_name> -> docker container ga ulanish.
+
+docker container stop <container_name> -> docker container ni to'g'ri to'xtatish.
+docker container kill <container_name> -> docker container ni kill qilish.
+
+docker container rm <container_name> -> docker container ni o'chirish.
+docker container prune -> barcha to'xtab turgan container larni o'chirish.
+
+docker container run --rm -it <container_name> <container_sub_command> -> container o'z ishini tugatgandan keyin o'chib ketadi.
+
+docker container run --name=<your_container_name> <container_name> -> docker container ga nom berish.
+
+docker container run --rm -it -d <container_name> -> container ni detached holatda ishga tushirish.
+docker container run --rm -itd <container_name> -> container ni detached holatda ishga tushirish.
+
+docker container exec <container_name> <command> -> ishlab turgan containerga qo'shimcha buyruqlar berish.
+docker container exec -it <container_name> <command> -> exec yordamida containerga ulanish.
+
+
+IMAGE LAR BILAN ISHLASH.
+
+docker image ls -> computer dagi image lar ro'yxatini ko'rish.
+
+docker image pull <image_name>:<image_tag> -> docker hubdan kerakli image ni yuklab (pull) olish.
+
+docker image rm <image_name> -> local image ni o'chirish.
+docker image rm -f <image_name> -> kuch bilan o'chirish: ya'ni container ishlayotgan bo'lsa ham avval container to'xtatilib so'ng o'chirib yuboriladi.
+docker image rm <image_id> -> local image ni ID orqali o'chirish.
+docker image prune -> barcha ishlatilmayotgan image larni o'chirib tashlash.
+
+docker system df -> docker xotirada qancha joy egallaganini ko'rish.
+docker builder prune -> docker builder cache ni tozalash.
+
+docker image build -t <image_name>:<image_tag> /path/to/Dockerfile -> docker image ni qurish.
+
+
+docker container run -itd -p 80:80 mynginx:v1.0 -> container ichidagi 80 portini localhostda mapping qilish.
+
+docker container run -itd -p <port_1>:<port_1> -p <port_2>:<port_2> -> bir nechta portlarni mapping qilish.
+
+
+
+
